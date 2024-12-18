@@ -1,9 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AI News Platform
+
+This is a Next.js-based platform for AI-generated and human-curated news articles, built with modern web technologies. The platform supports multiple user roles including administrators, reporters, editors, and regular users.
+
+## Key Features
+
+- **User Role Management**: Distinct roles for admins, reporters, editors and regular users
+- **Article Management**: Create, edit, publish and manage AI-generated news articles
+- **Credit System**: Built-in credit system for monetization
+- **AI Integration**: AI-powered article generation and enhancement
+- **Rich Editor Features**: Support for article editing, feedback, and reactions
+- **Responsive Design**: Built with TailwindCSS for a fully responsive experience
+
+## Tech Stack
+
+- **Framework**: Next.js 14 with App Router
+- **Language**: TypeScript
+- **Database**: PostgreSQL with Prisma ORM
+- **Authentication**: Clerk
+- **API**: tRPC
+- **Styling**: TailwindCSS
+- **Payment Processing**: Stripe
+- **AI Integration**: Custom AI service
+- **Components**: Shadcn/ui
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
 
+3. Set up environment variables (refer to .env.example)
+
+4. Start the development server:
 ```bash
 npm run dev
 # or
@@ -14,23 +50,45 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- `/src/app`: Main application routes and pages
+- `/src/components`: Reusable UI components organized by atomic design
+- `/src/trpc`: tRPC router and API configurations
+- `/src/ai`: AI service integration
+- `/src/db`: Database configuration and utilities
+- `/src/forms`: Form definitions and validations
+- `/src/util`: Utility functions and helpers
+
+## Key Functionalities
+
+- **Admin Dashboard**: Manage users, articles, and system settings
+- **Reporter Tools**: Create and manage articles
+- **Editor Interface**: Review and enhance articles
+- **User Features**: Read articles, manage subscriptions, and interact with content
+- **Credit System**: Purchase and manage credits for platform services
+- **AI Integration**: Generate and enhance article content
+
+## Development and Deployment
+
+- Uses ESLint and Prettier for code formatting
+- Husky for pre-commit hooks
+- Docker support for development and deployment
+- Built-in Vercel deployment configuration
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+- [Next.js Documentation](https://nextjs.org/docs)
+- [tRPC Documentation](https://trpc.io)
+- [Prisma Documentation](https://www.prisma.io/docs)
+- [TailwindCSS Documentation](https://tailwindcss.com/docs)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Contributions are welcome! Please read the contributing guidelines before submitting pull requests.
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is licensed under the MIT License - see the LICENSE file for details.
